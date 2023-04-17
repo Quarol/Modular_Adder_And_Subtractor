@@ -1,2 +1,2 @@
 # Modular-Adder-and-Subtractor
-Software (python) and hardware (verilog) implementation of modular adder and subtractor for arbitrali moduli
+Abstractive (python) and hardware (verilog) implementation of modular adder and subtractor for arbitrali moduli
