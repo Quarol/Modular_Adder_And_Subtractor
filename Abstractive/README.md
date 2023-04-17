@@ -1,1 +1,1 @@
-Python implementation
+Abstractive implementation in Python
