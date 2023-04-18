@@ -42,8 +42,8 @@ def validate(results: list):
 if __name__ == '__main__':
     m = 11
     operator = ModularOperator(m)
-    x = 8
-    y = 5
+    x = 0
+    y = 0
     print(operator.add(x, y))
     print(operator.subtract(x, y))
 

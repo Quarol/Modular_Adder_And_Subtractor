@@ -18,7 +18,7 @@ class ModularOperator:
         return calculate(self.m, self.n, x, y, 0)
 
     def subtract(self, x, y):
-        return calculate(self.m, self.n, x, y, self.subtract_mode)
+        return calculate(self.m, self.n, x, y, 1)
 
 
 '''
@@ -32,19 +32,18 @@ class ModularOperator:
 
 def calculate(m: int, n: int, x: int, y: int, s: int):
     # created to save up on computing
-    repeating_part = x + (y ^ s)
-    two_to_n = 2 ** n
+    repeating_part = x + (y ^ s*(2**n - 1))
 
-    w = repeating_part + (two_to_n ^ s) + s
+    w = repeating_part + (2**n ^ s) + s
     v = repeating_part + (NOT(m) ^ s) + 1
 
-    print(f'w={w}, v={v}, s={s}, 2**n={two_to_n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={two_to_n^s}, !m^s={NOT(m)^s}')
+    print(f'w={w}, v={v}, s={s}, 2**n={2**n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={(2**n)^s}, !m^s={NOT(m)^s}')
 
-    if (s == 0 and v < two_to_n) or \
-            (s == 1 and w >= two_to_n * 2):
-        return w % two_to_n
+    if (s == 0 and v < 2**n) or \
+            (s == 1 and w >= 2**(n+1)):
+        return w % 2**n
 
-    return v % two_to_n
+    return v % 2**n
 
 
 # in python int is always signed, so we have to keep the leftmost bit as it was
