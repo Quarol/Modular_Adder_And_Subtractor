@@ -18,7 +18,7 @@ class ModularOperator:
         return calculate(self.m, self.n, x, y, 0)
 
     def subtract(self, x, y):
-        return calculate(self.m, self.n, x, y, 1)
+        return calculate(self.m, self.n, x, y, self.subtract_mode)
 
 
 '''
@@ -39,7 +39,6 @@ def calculate(m: int, n: int, x: int, y: int, s: int):
     v = repeating_part + (NOT(m) ^ s) + 1
 
     print(f'w={w}, v={v}, s={s}, 2**n={two_to_n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={two_to_n^s}, !m^s={NOT(m)^s}')
-
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n * 2):
