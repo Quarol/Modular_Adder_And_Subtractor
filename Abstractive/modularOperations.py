@@ -18,7 +18,7 @@ class ModularOperator:
         return calculate(self.m, self.n, x, y, 0)
 
     def subtract(self, x, y):
-        return calculate(self.m, self.n, x, y, self.subtract_mode)
+        return calculate(self.m, self.n, x, y, 1)
 
 
 '''
@@ -31,15 +31,15 @@ class ModularOperator:
 
 
 def calculate(m: int, n: int, x: int, y: int, s: int):
-    if x not in range(m) or y not in range(m):  # range(m) means [0, m-1]
-        raise Exception('\n\nERROR! The number must be in the range [0, m-1]')
-
     # created to save up on computing
     repeating_part = x + (y ^ s)
     two_to_n = 2 ** n
 
     w = repeating_part + (two_to_n ^ s) + s
     v = repeating_part + (NOT(m) ^ s) + 1
+
+    print(f'w={w}, v={v}, s={s}, 2**n={two_to_n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={two_to_n^s}, !m^s={NOT(m)^s}')
+
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n * 2):
