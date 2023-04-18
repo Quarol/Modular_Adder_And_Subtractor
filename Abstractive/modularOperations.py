@@ -32,18 +32,28 @@ class ModularOperator:
 
 def calculate(m: int, n: int, x: int, y: int, s: int):
     # created to save up on computing
-    repeating_part = x + (y ^ s*(2**n - 1))
+    s_for_xy = s * (2**n - 1)
+    s_for_2n = s * (2**(n+1) - 1)
+    repeating_part = x + (y ^ s_for_xy)
 
-    w = repeating_part + (2**n ^ s) + s
-    v = repeating_part + (NOT(m) ^ s) + 1
+    w = repeating_part + ((2**n) ^ s_for_2n) + s
+    v = repeating_part + (NOT(m) ^ s_for_xy) + 1
 
     print(f'w={w}, v={v}, s={s}, 2**n={2**n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={(2**n)^s}, !m^s={NOT(m)^s}')
+    print("w:", x, y^s_for_xy, (2**n)^s_for_2n, s, "=", w)
+    print("v:", x, y^s_for_xy, NOT(m)^s_for_xy, 1, "=", v)
 
     if (s == 0 and v < 2**n) or \
             (s == 1 and w >= 2**(n+1)):
+        print('w chosen')
         return w % 2**n
 
+    print('v chosen')
     return v % 2**n
+
+
+def get_s(bits: int):
+    return 2**bits - 1
 
 
 # in python int is always signed, so we have to keep the leftmost bit as it was

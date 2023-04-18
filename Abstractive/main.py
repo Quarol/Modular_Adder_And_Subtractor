@@ -1,6 +1,5 @@
 import math
 from modularOperations import ModularOperator as ModularOperator
-import pdb
 
 
 def test(m: int):
@@ -42,8 +41,8 @@ def validate(results: list):
 if __name__ == '__main__':
     m = 11
     operator = ModularOperator(m)
-    x = 0
-    y = 0
+    x = 8
+    y = 5
     print(operator.add(x, y))
     print(operator.subtract(x, y))
 
