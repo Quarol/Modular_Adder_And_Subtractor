@@ -1,50 +1,47 @@
-import math
 from modularOperations import ModularOperator as ModularOperator
 
 
 def test(m: int):
-    n = math.log2(m)
-    n = math.ceil(n)
-    digital_numbers = [i for i in range(2 ** n)]
+    op = ModularOperator(m)
 
-    combinations = []
-    for x in digital_numbers:
-        for y in digital_numbers:
-            combinations.append([x, y])
+    good = []
+    algorithm = []
+    for x in range(m):
+        for y in range(m):
+            t = (x % m + y % m) % m
+            a = op.add(x, y)
+            good.append(t)
+            algorithm.append(a)
 
-    operator = ModularOperator(m)
+    is_add = True
+    for i in range(len(good)):
+        is_add = (good[i] == algorithm[i])
+        if not is_add:
+            break
 
-    for combination in combinations:
-        x = combination[0]
-        y = combination[1]
+    good = []
+    algorithm = []
+    for x in range(m):
+        for y in range(m):
+            t = (x % m - y % m) % m
+            a = op.subtract(x, y)
+            good.append(t)
+            algorithm.append(a)
 
-        good_result_add = ((x % m) + (y % m)) % m
-        result_add = operator.add(x, y)
+    is_sub = True
+    for i in range(len(good)):
+        is_sub = (good[i] == algorithm[i])
+        if not is_sub:
+            break
 
-        if good_result_add != result_add:
-            operator.add(x, y)
-
-        good_result_sub = ((x % m) - (y % m)) % m
-        result_sub = operator.subtract(x, y)
-
-        if good_result_sub != result_sub:
-            operator.subtract(x, y)
-
-
-def validate(results: list):
-    for r in results:
-        if r[0] != r[1]:
-            return False
-    return True
+    return is_add, is_sub
 
 
 if __name__ == '__main__':
-    m = 11
-    operator = ModularOperator(m)
-    x = 8
-    y = 5
-    print(operator.add(x, y))
-    print(operator.subtract(x, y))
+    m_min = 6
+    m_max = 122
 
-
-    #test(m)
+    for m in range(m_min, m_max + 1):
+        is_true = test(m)
+        if False in is_true:
+            print(m)

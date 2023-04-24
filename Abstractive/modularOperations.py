@@ -31,34 +31,28 @@ class ModularOperator:
 
 
 def calculate(m: int, n: int, x: int, y: int, s: int):
+    if x not in range(m) or y not in range(m):  # range(m) means [0, m-1]
+        raise Exception('\n\nERROR! The number must be in the range [0, m-1]')
+
     # created to save up on computing
-    s_for_xy = s * (2**n - 1)
-    s_for_2n = s * (2**(n+1) - 1)
+    two_to_n = 2 ** n
+    s_for_xy = s * (two_to_n - 1)
+    s_for_2_to_n = s * (two_to_n*2 - 1)
     repeating_part = x + (y ^ s_for_xy)
 
-    w = repeating_part + ((2**n) ^ s_for_2n) + s
+    w = repeating_part + (two_to_n & s_for_2_to_n) + s  # alternatively: 2**n ^ NOT(s)
     v = repeating_part + (NOT(m) ^ s_for_xy) + 1
 
-    print(f'w={w}, v={v}, s={s}, 2**n={2**n}, !m={NOT(m)}, y^s={y^s}, 2**n^s={(2**n)^s}, !m^s={NOT(m)^s}')
-    print("w:", x, y^s_for_xy, (2**n)^s_for_2n, s, "=", w)
-    print("v:", x, y^s_for_xy, NOT(m)^s_for_xy, 1, "=", v)
+    if (s == 0 and v < two_to_n) or \
+            (s == 1 and w >= two_to_n*2):
+        return w % two_to_n
 
-    if (s == 0 and v < 2**n) or \
-            (s == 1 and w >= 2**(n+1)):
-        print('w chosen')
-        return w % 2**n
-
-    print('v chosen')
-    return v % 2**n
-
-
-def get_s(bits: int):
-    return 2**bits - 1
+    return v % two_to_n
 
 
 # in python int is always signed, so we have to keep the leftmost bit as it was
 # we can achieve it by using bit-mask which leftmost bit is always 0
-# to do it, we have to subtract 1 from 1 left-shifted [num_of_bits] times
+# to get such a mask, we have to subtract 1 from 1 left-shifted [num_of_bits] times
 def NOT(number: int):
     bits = number.bit_length()
     bitmask = (1 << bits) - 1
