@@ -45,10 +45,13 @@ def calculate(m: int, n: int, x: int, y: int, s: int):
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n*2):
-        #test(x, y, v, two_to_n, s)
+
+        if s == 1:
+            test(x, y, w, two_to_n, s)
         return w % two_to_n
 
-    #test(x, y, v, two_to_n, s)
+    #if s == 0:
+     #   test(x, y, v, two_to_n, s)
     return v % two_to_n
 
 
@@ -68,7 +71,10 @@ def test(x, y, p, two_to_n, s):
     bin_y = (4 - len(bin_y)) * '0' + bin_y
     bin_res = (4 - len(bin_res)) * '0' + bin_res
 
-    print(f'{s}    {f(bin_x)}  {f(bin_y)}  {f(bin_res)}')
+    file = open('res.txt', 'a')
+    text = f'{s}    {f(bin_x)}  {f(bin_y)}  {f(bin_res)}\n'
+    file.write(text)
+    file.close()
 
 
 # in python int is always signed, so we have to keep the leftmost bit as it was

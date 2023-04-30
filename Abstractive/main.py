@@ -47,17 +47,13 @@ def test():
             print(m)
 
 
-def f(text: str):
-    txt = ''
-    for c in text:
-        txt += c + '   '
-    return txt
-
-
 if __name__ == '__main__':
     m = 11
     n = 4
 
-    print('s    x3  x2  x1  x0    y3  y2  y1  y0    z3  z2  z1  z0')
+    f = open('res.txt', 'w')
+    f.write('s    x3  x2  x1  x0    y3  y2  y1  y0    z3  z2  z1  z0\n')
+    f.close()
+
     combinations(m)
 
