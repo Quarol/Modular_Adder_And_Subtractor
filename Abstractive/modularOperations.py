@@ -12,7 +12,6 @@ class ModularOperator:
         self.m = modulus
         self.n = math.log2(self.m)
         self.n = math.ceil(self.n)
-        self.subtract_mode = 2 ** self.n - 1
 
     def add(self, x, y):
         return calculate(self.m, self.n, x, y, 0)
@@ -45,8 +44,8 @@ def calculate(m: int, n: int, x: int, y: int, s: int):
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n*2):
-        if s == 1:
-            test(x, y, w, two_to_n, s)
+
+        #test(x, y, w, two_to_n, s)
         return w % two_to_n
 
     #if s == 1:

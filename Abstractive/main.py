@@ -1,5 +1,5 @@
 from modularOperations import ModularOperator as ModularOperator
-
+import tests
 
 def combinations(m: int):
     op = ModularOperator(m)
@@ -35,8 +35,6 @@ def combinations(m: int):
             break
 
     return is_add, is_sub
-
-
 def test():
     m_min = 6
     m_max = 200
@@ -51,10 +49,9 @@ if __name__ == '__main__':
     m = 11
     n = 4
 
-    f = open('res.txt', 'w')
-    f.write('s    x3  x2  x1  x0    y3  y2  y1  y0    z3  z2  z1  z0\n')
-    f.close()
-    combinations(m)
+    #f = open('res.txt', 'w')
+    #f.write('s    x3  x2  x1  x0    y3  y2  y1  y0    z3  z2  z1  z0\n')
+    #f.close()
+    #combinations(m)
 
-    #test()
-
+    tests.run(m)

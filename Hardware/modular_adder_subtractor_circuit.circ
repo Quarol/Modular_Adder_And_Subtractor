@@ -2086,4 +2086,62 @@
     <wire from="(960,1350)" to="(960,1440)"/>
     <wire from="(960,1440)" to="(980,1440)"/>
   </circuit>
+  <circuit name="test">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="test"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(260,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(290,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(300,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(320,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(340,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(360,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(380,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(340,190)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(320,280)" name="HAL">
+      <a name="facing" val="south"/>
+    </comp>
+    <wire from="(260,280)" to="(260,340)"/>
+    <wire from="(280,280)" to="(280,330)"/>
+    <wire from="(280,330)" to="(300,330)"/>
+    <wire from="(290,100)" to="(290,230)"/>
+    <wire from="(300,330)" to="(300,340)"/>
+    <wire from="(320,100)" to="(320,130)"/>
+    <wire from="(340,190)" to="(340,230)"/>
+    <wire from="(340,330)" to="(340,340)"/>
+    <wire from="(340,330)" to="(350,330)"/>
+    <wire from="(350,280)" to="(350,330)"/>
+    <wire from="(360,100)" to="(360,130)"/>
+    <wire from="(370,280)" to="(370,300)"/>
+    <wire from="(370,300)" to="(380,300)"/>
+    <wire from="(380,300)" to="(380,340)"/>
+  </circuit>
 </project>
