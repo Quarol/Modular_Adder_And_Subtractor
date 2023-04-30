@@ -54,6 +54,7 @@ if __name__ == '__main__':
     f = open('res.txt', 'w')
     f.write('s    x3  x2  x1  x0    y3  y2  y1  y0    z3  z2  z1  z0\n')
     f.close()
-
     combinations(m)
+
+    #test()
 

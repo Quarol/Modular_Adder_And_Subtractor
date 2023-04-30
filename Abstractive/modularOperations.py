@@ -40,18 +40,17 @@ def calculate(m: int, n: int, x: int, y: int, s: int):
     s_for_2_to_n = s * (two_to_n*2 - 1)
     repeating_part = x + (y ^ s_for_xy)
 
-    w = repeating_part + (two_to_n & s_for_2_to_n) + s  # alternatively: 2**n ^ NOT(s)
+    w = repeating_part + (two_to_n) + s  # alternatively: 2**n ^ NOT(s)
     v = repeating_part + (NOT(m) ^ s_for_xy) + 1
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n*2):
-
-        if s == 1:
-            test(x, y, w, two_to_n, s)
+        #if s == 1:
+        test(x, y, w, two_to_n, s)
         return w % two_to_n
 
     #if s == 0:
-     #   test(x, y, v, two_to_n, s)
+    test(x, y, v, two_to_n, s)
     return v % two_to_n
 
 

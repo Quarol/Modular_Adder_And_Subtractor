@@ -914,57 +914,6 @@
     <wire from="(310,280)" to="(310,450)"/>
     <wire from="(330,200)" to="(330,230)"/>
   </circuit>
-  <circuit name="test">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="test"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(280,350)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(310,240)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(310,350)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(350,170)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(360,350)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(390,350)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="1" loc="(360,250)" name="XOR Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="30"/>
-    </comp>
-    <comp loc="(340,320)" name="HAL">
-      <a name="facing" val="south"/>
-    </comp>
-    <wire from="(280,320)" to="(280,350)"/>
-    <wire from="(300,320)" to="(300,330)"/>
-    <wire from="(300,330)" to="(310,330)"/>
-    <wire from="(310,240)" to="(310,270)"/>
-    <wire from="(310,330)" to="(310,350)"/>
-    <wire from="(350,170)" to="(350,210)"/>
-    <wire from="(360,330)" to="(360,350)"/>
-    <wire from="(360,330)" to="(370,330)"/>
-    <wire from="(370,320)" to="(370,330)"/>
-    <wire from="(390,320)" to="(390,350)"/>
-  </circuit>
   <circuit name="always_V">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="always_V"/>
