@@ -45,12 +45,12 @@ def calculate(m: int, n: int, x: int, y: int, s: int):
 
     if (s == 0 and v < two_to_n) or \
             (s == 1 and w >= two_to_n*2):
-        #if s == 1:
-        test(x, y, w, two_to_n, s)
+        if s == 1:
+            test(x, y, w, two_to_n, s)
         return w % two_to_n
 
-    #if s == 0:
-    test(x, y, v, two_to_n, s)
+    #if s == 1:
+     #   test(x, y, v, two_to_n, s)
     return v % two_to_n
 
 
