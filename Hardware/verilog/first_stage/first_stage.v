@@ -39,7 +39,6 @@ module FIRST_STAGE (
     .a(a2_0)
   );
 
-
     SINGLE_INDEX i1 (
     .s(s),
     .x(x3),
@@ -50,7 +49,7 @@ module FIRST_STAGE (
     .a(a1_0)
   );
 
-     SINGLE_INDEX i0 (
+    SINGLE_INDEX i0 (
     .s(s),
     .x(x3),
     .y(y3),

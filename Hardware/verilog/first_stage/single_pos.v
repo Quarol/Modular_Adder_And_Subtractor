@@ -13,12 +13,12 @@ module SINGLE_INDEX (
     assign y_XOR_s = y ^ s;
 
     HAL hal (
-    .x(x),
-    .y(y_XOR_s),
-    .not_b(not_b),
-    .b(b),
-    .not_a(not_a),
-    .a(a)
+      .x(x),
+      .y(y_XOR_s),
+      .not_b(not_b),
+      .b(b),
+      .not_a(not_a),
+      .a(a)
   );
      
 

@@ -3,7 +3,9 @@ module MUX(
     out
 );
     input sel, a, b;
-    output out;
+    output reg out;
+
+    wire out_t;
 
     always @*
     if(sel == 1'b0) begin
