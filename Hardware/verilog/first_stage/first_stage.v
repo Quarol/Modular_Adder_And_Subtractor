@@ -1,3 +1,5 @@
+`include "single_pos.v"
+
 module FIRST_STAGE (
     s,
     x3, x2, x1, x0,
@@ -18,7 +20,7 @@ module FIRST_STAGE (
 
 
     SINGLE_INDEX i3 (
-    .s(s)
+    .s(s),
     .x(x3),
     .y(y3),
     .not_b(b4_1),
@@ -28,7 +30,7 @@ module FIRST_STAGE (
   );
 
     SINGLE_INDEX i2 (
-    .s(s)
+    .s(s),
     .x(x3),
     .y(y3),
     .not_b(b3_1),
@@ -39,7 +41,7 @@ module FIRST_STAGE (
 
 
     SINGLE_INDEX i1 (
-    .s(s)
+    .s(s),
     .x(x3),
     .y(y3),
     .not_b(b2_1),
@@ -49,7 +51,7 @@ module FIRST_STAGE (
   );
 
      SINGLE_INDEX i0 (
-    .s(s)
+    .s(s),
     .x(x3),
     .y(y3),
     .not_b(b1_1),

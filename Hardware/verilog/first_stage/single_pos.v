@@ -1,9 +1,11 @@
+`include "hal.v"
+
 module SINGLE_INDEX (
     s, x, y,
     not_b, b,
     not_a, a
 );
-    input   x, y;
+    input   s, x, y;
     output  not_b, b,
             not_a, a;
 
