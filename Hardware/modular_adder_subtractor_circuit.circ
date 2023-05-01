@@ -1153,4 +1153,10 @@
     <wire from="(370,320)" to="(370,330)"/>
     <wire from="(390,320)" to="(390,350)"/>
   </circuit>
+  <circuit name="verilog">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="verilog"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+  </circuit>
 </project>
