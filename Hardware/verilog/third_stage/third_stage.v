@@ -5,7 +5,7 @@ module THIRD_STAGE (
     s,
     b4_0, b4,
     w4, v4,
-    v3, w4,
+    v3, w3,
     v2, w2,
     v1, w1,
     v0, w0,
