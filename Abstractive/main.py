@@ -1,6 +1,7 @@
 from modularOperations import ModularOperator as ModularOperator
 
 
+
 def combinations(m: int):
     op = ModularOperator(m)
 
