@@ -27,7 +27,7 @@ module SECOND_STAGE (
         .a2(a2_0), .b2(b2_0),
         .a1(a1_0), .b1(b1_0),
         .a0(a0_0), .b0(s),
-        .out4(w4), .out3(w4), .out2(w2), .out1(w1), .out0(w0)
+        .out4(w4), .out3(w3), .out2(w2), .out1(w1), .out0(w0)
     );
 
     wire    a3, b3, 
@@ -53,7 +53,7 @@ module SECOND_STAGE (
         .a2(a2), .b2(b2),
         .a1(a1), .b1(b1),
         .a0(a0), .b0(const),
-        .out4(v4), .out3(v4), .out2(v2), .out1(v1), .out0(v0)
+        .out4(v4), .out3(v3), .out2(v2), .out1(v1), .out0(v0)
     );
 
 endmodule
