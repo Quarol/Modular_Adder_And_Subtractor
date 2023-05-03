@@ -20,9 +20,7 @@ module FIRST_STAGE (
 
 
     SINGLE_INDEX i3 (
-    .s(s),
-    .x(x3),
-    .y(y3),
+    .s(s), .x(x3), .y(y3),
     .not_b(b4_1),
     .b(b4_0),
     .not_a(a3_1),
@@ -30,9 +28,7 @@ module FIRST_STAGE (
   );
 
     SINGLE_INDEX i2 (
-    .s(s),
-    .x(x3),
-    .y(y3),
+    .s(s), .x(x2), .y(y2),
     .not_b(b3_1),
     .b(b3_0),
     .not_a(a2_1),
@@ -40,9 +36,7 @@ module FIRST_STAGE (
   );
 
     SINGLE_INDEX i1 (
-    .s(s),
-    .x(x3),
-    .y(y3),
+    .s(s), .x(x1), .y(y1),
     .not_b(b2_1),
     .b(b2_0),
     .not_a(a1_1),
@@ -50,9 +44,7 @@ module FIRST_STAGE (
   );
 
     SINGLE_INDEX i0 (
-    .s(s),
-    .x(x3),
-    .y(y3),
+    .s(s), .x(x0), .y(y0),
     .not_b(b1_1),
     .b(b1_0),
     .not_a(a0_1),
