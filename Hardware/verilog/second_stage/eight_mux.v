@@ -41,15 +41,15 @@ module EIGHT_MUX (
 
     MUX mux5 (
         .sel(s),
-        .a(b3_0),
-        .b(b3_1),
+        .a(b3_1),
+        .b(b3_0),
         .out(b3)
     );   
 
     MUX mux4 (
         .sel(s),
-        .a(a2_0),
-        .b(a2_1),
+        .a(a2_1),
+        .b(a2_0),
         .out(a2)
     ); 
 
