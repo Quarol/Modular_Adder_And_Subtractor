@@ -1,4 +1,4 @@
-`include "hal.v"
+`include "first_stage/hal.v"
 
 module SINGLE_INDEX (
     s, x, y,

@@ -1,5 +1,5 @@
-`include "prefix_adder.v"
-`include "eight_mux.v"
+`include "second_stage/prefix_adder.v"
+`include "second_stage/eight_mux.v"
 
 module SECOND_STAGE (
     s,

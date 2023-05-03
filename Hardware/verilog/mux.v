@@ -1,3 +1,6 @@
+`ifndef MUX
+`define MUX
+
 module MUX(
     sel, a, b,
     out
@@ -15,3 +18,5 @@ module MUX(
     end
 
 endmodule
+
+`endif

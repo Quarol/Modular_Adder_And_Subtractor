@@ -1,4 +1,4 @@
-`include "single_pos.v"
+`include "first_stage/single_pos.v"
 
 module FIRST_STAGE (
     s,

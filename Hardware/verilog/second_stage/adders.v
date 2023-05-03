@@ -1,4 +1,4 @@
-`include "adder.v"
+`include "second_stage/adder.v"
 
 module ADDERS (
     a3, b3,

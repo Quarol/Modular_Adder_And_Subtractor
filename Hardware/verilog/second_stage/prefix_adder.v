@@ -1,5 +1,5 @@
-`include "black_node.v"
-`include "adders.v"
+`include "second_stage/black_node.v"
+`include "second_stage/adders.v"
 
 module PREFIX_ADDER (
     a3, b3,

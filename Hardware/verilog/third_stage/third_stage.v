@@ -1,5 +1,5 @@
-`include "first_condition.v"
-`include "second_condition.v"
+`include "third_stage/first_condition.v"
+`include "third_stage/second_condition.v"
 
 module THIRD_STAGE (
     s,

@@ -1,4 +1,4 @@
-`include "../mux.v"
+`include "mux.v"
 
 module EIGHT_MUX (
     s,

@@ -347,14 +347,14 @@
       <a name="facing" val="north"/>
       <a name="label" val="b3_1"/>
     </comp>
-    <comp lib="0" loc="(670,610)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="a0_0"/>
-    </comp>
     <comp lib="0" loc="(680,180)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="x2"/>
+    </comp>
+    <comp lib="0" loc="(700,600)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="a0_0"/>
     </comp>
     <comp lib="0" loc="(720,180)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -819,17 +819,12 @@
     <wire from="(620,1440)" to="(620,1530)"/>
     <wire from="(620,1440)" to="(680,1440)"/>
     <wire from="(620,1530)" to="(640,1530)"/>
-    <wire from="(640,580)" to="(640,620)"/>
-    <wire from="(640,580)" to="(700,580)"/>
-    <wire from="(640,620)" to="(670,620)"/>
     <wire from="(650,330)" to="(650,350)"/>
     <wire from="(670,1530)" to="(680,1530)"/>
     <wire from="(670,330)" to="(670,370)"/>
-    <wire from="(670,610)" to="(670,620)"/>
     <wire from="(670,640)" to="(670,1100)"/>
     <wire from="(670,640)" to="(700,640)"/>
     <wire from="(680,180)" to="(680,280)"/>
-    <wire from="(700,580)" to="(700,600)"/>
     <wire from="(700,630)" to="(700,640)"/>
     <wire from="(710,640)" to="(710,740)"/>
     <wire from="(710,640)" to="(720,640)"/>
