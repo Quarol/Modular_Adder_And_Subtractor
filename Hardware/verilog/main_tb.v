@@ -15,21 +15,8 @@ module MAIN_TB ();
         .z3(z3), .z2(z2), .z1(z1), .z0(z0)
     );
 
-    integer x, y, z, S, count, result, modulus;
+    integer x, y, Z, S, count, result, modulus;
     initial begin
-        s = 0;
-        x3 = 0;
-        x2 = 0;
-        x1 = 0;
-        x0 = 1;
-        y3 = 0;
-        y2 = 0;
-        y1 = 0;
-        y0 = 1;
-
-        #1
-        $display(z3, z2, z1, z0);
-
         count = 0;
         modulus = 11;
         for (S = 0; S <= 1; S = S + 1) begin
@@ -45,10 +32,9 @@ module MAIN_TB ();
                     y2 = (y / 4) % 2;
                     y1 = (y / 2) % 2;
                     y0 = y % 2;
-
                     #1
-                    //$monitor("z3 = %d", z3);
 
+                    $display("z3 = %d", z3);
 
                     if (S == 0) begin
                         result = (x + y) % 11;
@@ -56,15 +42,16 @@ module MAIN_TB ();
                         result = (x - y) % 11;
                     end
 
-                    // Check if result matches z3z2z1z0
-                    if (result == ((z3 * 8) + (z2 * 4) + (z1 * 2) + z0)) begin
+                    Z = (z3 * 8) + (z2 * 4) + (z1 * 2) + z0;
+
+                    if (result == Z) begin
                         count = count + 1;
                     end
                 end
             end
         end
 
-        //$display(count);
+        $display(count);
     end
 
 endmodule
