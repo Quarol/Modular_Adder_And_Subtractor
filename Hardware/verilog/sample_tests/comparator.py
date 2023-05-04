@@ -16,10 +16,10 @@ def check(f1, f2):
             print("The files are different.")
 
 
-f1 = '_first.txt'
-f2 = 'first.txt'
+f1 = '_mux.txt'
+f2 = '8mux_result.txt'
 
-write_to(f2)
+#write_to(f2)
 check(f1, f2)
 
 
