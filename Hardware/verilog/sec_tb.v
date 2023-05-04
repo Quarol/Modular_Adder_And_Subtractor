@@ -39,7 +39,7 @@ module moduleName (
 
 
         counter = 0;
-        for (S = 0; S <= 1; S = S + 1) begin
+        s = 0;
             for (x = 0; x <= 10; x = x + 1) begin
                 for (y = 0; y <= 10; y = y + 1) begin
                     
@@ -56,12 +56,8 @@ module moduleName (
                     #1
 
                     out = (w4 * 16) + (w3 * 8) + (w2 * 4) + (w1 * 2) + w0;
-                    
-                    if (S == 0) begin
-                        result = x + y;
-                    end else begin
-                        result = x + (~y) + 2**4 + 1;
-                    end
+                    result = x + y;
+                    //result = x + (~y) + 2**4 + 1;
 
                     if (result == out) begin
                         counter = counter + 1;
@@ -69,7 +65,6 @@ module moduleName (
 
                 end
             end
-        end
 
         $display(counter);
     end
