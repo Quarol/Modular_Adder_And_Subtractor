@@ -1,5 +1,5 @@
-f1 = '_first.txt'
-f2 = 'first_stage_results.txt'
+f1 = '8mux_result.txt'
+f2 = '_mux.txt'
 
 with open(f1, 'r') as file1, open(f2, 'r') as file2:
     # Read the contents of both files
