@@ -15,13 +15,13 @@ module MAIN_TB ();
         .z3(z3), .z2(z2), .z1(z1), .z0(z0)
     );
 
-    integer x, y, Z, S, count, result, modulus;
+    integer x, y, Z, S, count, result, modulus, sub;
     initial begin
         count = 0;
         modulus = 11;
         for (S = 0; S <= 1; S = S + 1) begin
-            for (x = 0; x <= 10; x = x + 1) begin
-                for (y = 0; y <= 10; y = y + 1) begin
+            for (x = 0; x < modulus; x = x + 1) begin
+                for (y = 0; y < modulus; y = y + 1) begin
                     
                     s = S;
                     x3 = x / 8;
@@ -36,9 +36,14 @@ module MAIN_TB ();
                     #1
 
                     if (S == 0) begin
-                        result = (x + y) % 11;
+                        result = (x + y) % modulus;
                     end else begin
-                        result = (x - y) % 11;
+                        sub = x - y;
+                        if (sub < 0) begin
+                            result = sub + modulus;
+                        end else begin
+                            result = sub % modulus;
+                        end
                     end
 
                     Z = (z3 * 8) + (z2 * 4) + (z1 * 2) + z0;
