@@ -45,8 +45,6 @@ module MAIN_TB ();
 
                     if (result == Z) begin
                         count = count + 1;
-                    end else begin
-                        $display("Wrong!");
                     end
                 end
             end
