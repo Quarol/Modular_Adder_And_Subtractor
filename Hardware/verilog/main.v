@@ -15,7 +15,6 @@ module MAIN (
             y3, y2, y1, y0;
     output  z3, z2, z1, z0;
 
-
     wire    b4_0, b4_1, a3_0, a3_1,
             b3_0, b3_1, a2_0, a2_1,
             b2_0, b2_1, a1_0, a1_1,
@@ -34,7 +33,7 @@ module MAIN (
     wire    w4, w3, w2, w1, w0,
             v4, v3, v2, v1, v0,
             b4;
-
+    
     SECOND_STAGE second_stage (
         .s(s),
         .b4_0(b4_0), .b4_1(b4_1), .a3_0(a3_0), .a3_1(a3_1),

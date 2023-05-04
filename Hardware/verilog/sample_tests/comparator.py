@@ -16,8 +16,8 @@ def check(f1, f2):
             print("The files are different.")
 
 
-f1 = '_mux.txt'
-f2 = '8mux_result.txt'
+f1 = 'wvb_results.txt'
+f2 = '_wvb.txt'
 
 #write_to(f2)
 check(f1, f2)
