@@ -35,10 +35,7 @@ module moduleName (
 
         #1
 
-        $display(a3, b3, 
-            a2, b2,
-            a1, b1,
-            a0, b4);
+        $display(b4, a3, b3, a2, b2, a1, b1, a0);
     end
 
 endmodule

@@ -32,9 +32,8 @@ module MAIN_TB ();
                     y2 = (y / 4) % 2;
                     y1 = (y / 2) % 2;
                     y0 = y % 2;
+                    
                     #1
-
-                    $display("z3 = %d", z3);
 
                     if (S == 0) begin
                         result = (x + y) % 11;
@@ -46,12 +45,14 @@ module MAIN_TB ();
 
                     if (result == Z) begin
                         count = count + 1;
+                    end else begin
+                        $display("Wrong!");
                     end
                 end
             end
         end
 
-        $display(count);
+        $display("Out of 242 operations the number of correct ones are: ", count);
     end
 
 endmodule

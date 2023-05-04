@@ -64,12 +64,9 @@ module PREFIX_ADDER (
 
 
     assign out0 = H0;
-    assign out1 = H1 ^ P0;
+    assign out1 = H1 ^ G0;
     assign out2 = H2 ^ GiGj_0;
     assign out3 = H3 ^ GiGj_1;
     assign out4 = GiGj_3;
-
-
-
 
 endmodule
