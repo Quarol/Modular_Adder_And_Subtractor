@@ -1,4 +1,4 @@
-The implementation of the mathematical formulas in Python with a simple test.  
+The implementation of the mathematical formulas for any modulus with a simple test.
   
 The unified set of formulas for modular addition and subtraction were given as follows:  
 `` z = (x + (-1)^s * y) mod m
