@@ -16,9 +16,11 @@ module MAIN_TB ();
     );
 
     integer x, y, Z, S, count, result, modulus, sub;
+    defparam dut.m=4'b1010;
+
     initial begin
         count = 0;
-        modulus = 11;
+        modulus = dut.m[0] + 2*dut.m[1] + 4*dut.m[2]+8*dut.m[3];
         for (S = 0; S <= 1; S = S + 1) begin
             for (x = 0; x < modulus; x = x + 1) begin
                 for (y = 0; y < modulus; y = y + 1) begin
@@ -55,7 +57,8 @@ module MAIN_TB ();
             end
         end
 
-        $display("Out of 242 operations the number of correct ones are: ", count);
+        $display("Total: ", modulus*modulus*2);
+        $display("Passed: ", count);
     end
 
 endmodule

@@ -9,6 +9,8 @@ module MAIN (
 
     z3, z2, z1, z0
 );
+parameter [3:0] m = 4'b1000;
+defparam second_stage.m=m;
 
     input   s,
             x3, x2, x1, x0,

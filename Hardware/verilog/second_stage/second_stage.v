@@ -11,6 +11,8 @@ module SECOND_STAGE (
     v4, v3, v2, v1, v0,
     b4
 );
+parameter [3:0] m = 4'b0000;
+defparam em.m=m;
 
     input   s,
             b4_0, b4_1, a3_0, a3_1,
