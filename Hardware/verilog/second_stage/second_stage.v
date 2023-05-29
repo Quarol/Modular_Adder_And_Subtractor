@@ -52,7 +52,7 @@ defparam em.m=m;
         .a3(a3), .b3(b3),
         .a2(a2), .b2(b2),
         .a1(a1), .b1(b1),
-        .a0(a0), .b0(1),
+        .a0(a0), .b0(1'b1),
         .out4(v4), .out3(v3), .out2(v2), .out1(v1), .out0(v0)
     );
 

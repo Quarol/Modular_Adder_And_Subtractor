@@ -9,7 +9,17 @@ module MAIN (
 
     z3, z2, z1, z0
 );
-parameter [3:0] m = 4'b1000;
+parameter [3:0] m = 4'b1111;
+
+//Check if m is in range [9,15]
+always @(s) begin
+    if(m < 4'b1000 || m > 4'b1111) begin
+        $display("m must be in range [9,15]!");
+        $finish;
+    end
+
+
+end
 defparam second_stage.m=m;
 
     input   s,
