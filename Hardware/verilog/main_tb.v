@@ -17,11 +17,11 @@ module MAIN_TB ();
 
     integer x, y, Z, S, count, result, modulus, sub;
     //Choose modulus in [1001b, 1111b]
-    defparam dut.m=4'b1111;
+    defparam dut.m=4'b1100;
 
     initial begin
         count = 0;
-        //Converts binary parameter m
+        //Converts binary parameter m to decimal
         modulus = dut.m[0] + 2*dut.m[1] + 4*dut.m[2]+8*dut.m[3];
         // Generates all possible combinations of S , x and y for given modulus
         for (S = 0; S <= 1; S = S + 1) begin
