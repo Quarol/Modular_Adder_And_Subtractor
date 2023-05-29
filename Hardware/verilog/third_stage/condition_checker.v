@@ -1,4 +1,4 @@
-module FIRST_CONDITION (
+module CONDITION_CHECKER (
     s,
     b4_0, b4,
     w4, v4,

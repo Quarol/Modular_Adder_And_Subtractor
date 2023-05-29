@@ -1,5 +1,5 @@
 `include "second_stage/black_node.v"
-`include "second_stage/adders.v"
+`include "second_stage/ppa_inputs.v"
 
 module PREFIX_ADDER (
     a3, b3,
@@ -20,7 +20,7 @@ module PREFIX_ADDER (
             H1, G1, P1,
             H0, G0, P0;
 
-    ADDERS adders (
+    PPA_INPUTS ppa_inputs (
         .a3(a3), .b3(b3),
         .a2(a2), .b2(b2),
         .a1(a1), .b1(b1),

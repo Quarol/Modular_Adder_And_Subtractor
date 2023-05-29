@@ -1,5 +1,5 @@
-`include "third_stage/first_condition.v"
-`include "third_stage/second_condition.v"
+`include "third_stage/condition_checker.v"
+`include "third_stage/result_chooser.v"
 
 module THIRD_STAGE (
     s,
@@ -21,19 +21,19 @@ module THIRD_STAGE (
             v0, w0;
     output  z3, z2, z1, z0;
 
-    wire first_out;
+    wire condition_out;
 
-    FIRST_CONDITION first_condition (
+    CONDITION_CHECKER condition_checker (
         .s(s),
         .b4_0(b4_0),
         .b4(b4),
         .w4(w4),
         .v4(v4),
-        .out(first_out)
+        .out(condition_out)
     );
 
-    SECOND_CONDITION second_condition (
-        .first_condition(first_out),
+    RESULT_CHOOSER result_chooser (
+        .condition_result (condition_out),
         .v3(v3), .w3(w3),
         .v2(v2), .w2(w2),
         .v1(v1), .w1(w1),

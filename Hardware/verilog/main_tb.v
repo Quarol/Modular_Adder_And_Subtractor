@@ -16,11 +16,14 @@ module MAIN_TB ();
     );
 
     integer x, y, Z, S, count, result, modulus, sub;
-    defparam dut.m=4'b1010;
+    //Choose modulus in [1001b, 1111b]
+    defparam dut.m=4'b1111;
 
     initial begin
         count = 0;
+        //Converts binary parameter m
         modulus = dut.m[0] + 2*dut.m[1] + 4*dut.m[2]+8*dut.m[3];
+        // Generates all possible combinations of S , x and y for given modulus
         for (S = 0; S <= 1; S = S + 1) begin
             for (x = 0; x < modulus; x = x + 1) begin
                 for (y = 0; y < modulus; y = y + 1) begin
@@ -50,13 +53,15 @@ module MAIN_TB ();
 
                     Z = (z3 * 8) + (z2 * 4) + (z1 * 2) + z0;
 
+                    // Check if the circuit output is correct by comparing it to the predicted result
+                    // Update the number of correct results
                     if (result == Z) begin
                         count = count + 1;
                     end
                 end
             end
         end
-
+        //Display tests result
         $display("Total: ", modulus*modulus*2);
         $display("Passed: ", count);
     end

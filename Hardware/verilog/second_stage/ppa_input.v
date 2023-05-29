@@ -1,4 +1,4 @@
-module ADDER (
+module PPA_INPUT (
     a, b,
     H, G, P
 );
