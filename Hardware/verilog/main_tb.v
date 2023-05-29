@@ -14,11 +14,11 @@ module MAIN_TB ();
         .y3(y3), .y2(y2), .y1(y1), .y0(y0),
         .z3(z3), .z2(z2), .z1(z1), .z0(z0)
     );
-    defparam dut.m=4'b1111;
 
     integer i, x, y, Z, S, count, result, modulus, sub;
     //Choose modulus in [1001b, 1111b]
-
+    defparam dut.m=4'b1111;
+    
     initial begin
         count = 0;
         //Converts binary parameter m to decimal
