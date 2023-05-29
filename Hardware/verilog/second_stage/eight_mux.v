@@ -31,20 +31,19 @@ parameter [3:0] m = 4'b1100;
     integer i=0;
     
 always @(s) begin
+    //Each pair of multiplexers is responsible for choosing outputs for (ai and b_{i+1}
 
+    //For s=0 and m[i]=1, multiplexers should choose ai_0 and bi+1_0
+    //For s=0 and m[i]=0, multiplexers should choose ai_1 and bi+1_1
+
+    //For s=1 and m[i]=1, multiplexers should choose ai_1 and bi+1_1
+    //For s=1 and m[i]=0, multiplexers should choose ai_0 and bi+1_0
     for (i = 0;i<4 ;i=i+1 ) begin
-        if(m[i] == 1 && s==0) begin
-            selects[i]=0;
-        end 
-        if(m[i] == 1 && s==1) begin
-            selects[i]=1;
+        if(s==0) begin
+            selects[i] = (m[i] == 0) ? 1 : 0;
         end
-
-        if(m[i] == 0 && s==1) begin
-            selects[i]=0;
-        end 
-        if(m[i] == 0 && s==0) begin
-            selects[i]=1;
+        else begin 
+            selects[i] = (m[i] == 1) ? 1 : 0;
         end
     end
 end
